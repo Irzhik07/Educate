@@ -1,0 +1,15 @@
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.csproj.AssemblyReference.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.GeneratedMSBuildEditorConfig.editorconfig
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.AssemblyInfoInputs.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.AssemblyInfo.cs
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.csproj.CoreCompileInputs.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\bin\Debug\net6.0\Lesson_2_Arifm_mean.exe
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\bin\Debug\net6.0\Lesson_2_Arifm_mean.deps.json
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\bin\Debug\net6.0\Lesson_2_Arifm_mean.runtimeconfig.json
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\bin\Debug\net6.0\Lesson_2_Arifm_mean.dll
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\bin\Debug\net6.0\Lesson_2_Arifm_mean.pdb
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.dll
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\refint\Lesson_2_Arifm_mean.dll
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.pdb
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\Lesson_2_Arifm_mean.genruntimeconfig.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Arifm_mean\obj\Debug\net6.0\ref\Lesson_2_Arifm_mean.dll

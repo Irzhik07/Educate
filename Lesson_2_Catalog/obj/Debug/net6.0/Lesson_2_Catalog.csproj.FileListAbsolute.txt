@@ -1,0 +1,15 @@
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.csproj.AssemblyReference.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.GeneratedMSBuildEditorConfig.editorconfig
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.AssemblyInfoInputs.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.AssemblyInfo.cs
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.csproj.CoreCompileInputs.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\bin\Debug\net6.0\Lesson_2_Catalog.exe
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\bin\Debug\net6.0\Lesson_2_Catalog.deps.json
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\bin\Debug\net6.0\Lesson_2_Catalog.runtimeconfig.json
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\bin\Debug\net6.0\Lesson_2_Catalog.dll
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\bin\Debug\net6.0\Lesson_2_Catalog.pdb
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.dll
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\refint\Lesson_2_Catalog.dll
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.pdb
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\Lesson_2_Catalog.genruntimeconfig.cache
+Z:\I.P.Kuznetsova\Обучение\C#_ASCON\Educate\Lesson_2_Catalog\Lesson_2_Catalog\obj\Debug\net6.0\ref\Lesson_2_Catalog.dll

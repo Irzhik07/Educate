@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_2_Arifm_mean", "Lesson_2_Arifm_mean.csproj", "{B39C6C16-837F-4D7F-8BFB-7CD78C3AE988}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B39C6C16-837F-4D7F-8BFB-7CD78C3AE988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B39C6C16-837F-4D7F-8BFB-7CD78C3AE988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B39C6C16-837F-4D7F-8BFB-7CD78C3AE988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B39C6C16-837F-4D7F-8BFB-7CD78C3AE988}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7289FFB5-3DC4-4B5C-9DB0-871B50D6B8B5}
+	EndGlobalSection
+EndGlobal
