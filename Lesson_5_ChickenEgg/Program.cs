@@ -18,7 +18,6 @@ namespace Lesson_5_ChickenEgg
             int action = 1;
             int countEgg = 0;        //счетчик яиц у курицы
             int countTakeEgg = 0;    //счетчик собранных яиц
-            int exit = 0;
 
             while (true)
             {
