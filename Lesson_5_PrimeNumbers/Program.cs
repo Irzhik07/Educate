@@ -10,9 +10,10 @@ namespace Lesson_5_PrimeNumbers
             //ДЗ с математикой:
             //Написать алгоритм поиска Nго простого числа
             //(к примеру 2, 3, 5, 7 где 2 это 1ое число 3 - второе и т.д., т.е.если N = 4 то на выходе должно быть 7)
-            string primeStr = "";  //строка простых чисел
 
+            string primeStr = "";  //строка простых чисел
             Console.Write("Введите положительное число N:");
+
             if (int.TryParse(Console.ReadLine(), out int n))
             {
                 if (n > 0)
