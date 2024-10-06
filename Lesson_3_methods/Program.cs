@@ -28,7 +28,6 @@ namespace Lesson_3_methods
                 {
                     Console.WriteLine(CheckInput(input, warn));
                     warn++;
-
                 }
 
                 //Выполняем проверку введенных данных
