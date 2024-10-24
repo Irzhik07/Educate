@@ -58,7 +58,7 @@ namespace Lesson_5_ChickenEgg
 
                         //Выполним проверку введенных данных
                         //Если данные введены некорректно (введен текст или число отличное от пунктов меню)
-                        if (!int.TryParse(Console.ReadLine(), out int n) ||  (n != 1 || n != 2 || n != 3))
+                        if (!int.TryParse(Console.ReadLine(), out int n))
                         {
                             Console.Write("\nВведите корректные данные. Повторите выбор дейтсвия\n");
                             continue;
