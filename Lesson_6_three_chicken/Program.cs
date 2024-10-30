@@ -45,7 +45,7 @@
                     break;
 
                 action = Menu();
-                Console.WriteLine($"Выбрано действие - {action}");
+                Console.WriteLine($"Выбрано  действие - {action}");
 
                 if (action == 0)
                     break;
