@@ -10,12 +10,11 @@ namespace Lesson_10
             Two,
             Three,
         }
-
         public class Ferm
-         {
-            public List<Cows> cows = new List<Cows>();
+        {
             public List<Chickens> chickens = new List<Chickens>();
-            
+            public List<Cows> cows = new List<Cows>();
+            public string Name { get; set; }
             public void AddAnimals()
             {
                 foreach (var number in Enum.GetValues(typeof(SelectAnimals)))
@@ -25,21 +24,35 @@ namespace Lesson_10
                 }
             }
 
-            public void ClearChickens()
+            //Проверяем уровень сытости курочек
+            //Если он <= 0, то курочки погибают
+            public void CheckSatietyChickens()
             {
-                chickens.Clear();
-                Console.WriteLine("11111111");
+                int s = 1;
+                foreach (var chicken in chickens)
+                    s = chicken.CheckSatiety();      
+
+                if (s <= 0)
+                {
+                    chickens.Clear();
+                    Console.WriteLine("Сытость курочек <0. Курочки погибли");
+                }
             }
 
-            public void StatisticsPrint()
+            //Проверяем уровень сытости коровок
+            //Если он <= 0, то коровки погибают
+            public void CheckSatietyCows()
             {
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                foreach (var chicken in chickens)
-                    Console.WriteLine($"Имя:{chicken.Name}  Статус жизни: {chicken.Live} Уровень сытости: {chicken.Satiety} Кол-во яиц - {chicken.CountEgg} Кол-во собранных яиц - {chicken.CountTakeEgg}");
+                int s = 1;
                 foreach (var cow in cows)
-                    Console.WriteLine($"Имя:{cow.Name}  Статус жизни: {cow.Live} Кол-во молока - {cow.VolumeMilk} Кол-во собранного молока - {cow.VolumeTakeMilk}");
-                Console.ResetColor();
+                    s = cow.CheckSatiety();
+
+                if (s <= 0)
+                {
+                    cows.Clear();
+                    Console.WriteLine("Сытость коровок <0. Коровки погибли");
+                }
             }
-        }
+        }   
     }
 }

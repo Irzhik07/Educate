@@ -1,21 +1,26 @@
 ﻿using System.Xml.Linq;
 using System.Collections.Generic;
+using static Lesson_10.Program;
 
 namespace Lesson_10
 {
     internal partial class Program
     {
-        public class Chickens
+        public class Chickens : Ferm
         {
-            public string Name { get; private set; }
-            public int Live { get; set; }
+            public bool Live { get; private set; }
             public int Satiety { get; set; }
             public int CountEgg { get; set; }
             public int CountTakeEgg { get; set; }
 
-            public Chickens(string name = "Неизвестно", int live = 1, int satiety = 1,int countEgg = 0, int countTakeEgg = 0)
+            public Chickens(string name = "Неизвестно", bool live = true, int satiety = 1, int countEgg = 0, int countTakeEgg = 0)
             {
-                Name = name; Live = live; Satiety = satiety; CountEgg = countEgg;  CountTakeEgg = countTakeEgg;
+                Name = name; Live = true; Satiety = satiety; CountEgg = countEgg; CountTakeEgg = countTakeEgg;
+            }
+
+            public int CheckSatiety()
+            {
+                return Satiety;
             }
 
         }
