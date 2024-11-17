@@ -7,15 +7,55 @@ namespace Lesson_11
     {
         public int VolumeMilk { get; set; }
         public int VolumeTakeMilk { get; set; }
-        public Cows(string name = "Неизвестно", bool live = true, int satiety = 1, int volumeMilk = 0, int volumeTakeMilk = 0)
+        public Cows(string name, bool live = true, int satiety = 1) : base(name, live, satiety)
         {
-            Name = name; Live = true; Satiety = satiety; VolumeMilk = volumeMilk; VolumeTakeMilk = volumeTakeMilk;
+            VolumeMilk = 0;
+            VolumeTakeMilk = 0;
+
+        }
+        //Кормим коровок
+        public void FeedCows()
+        {
+            VolumeMilk += 1;
+            Satiety += 1;
+
+            if (Satiety == 2)
+            {
+                OnSatietyChanged($"Уровень сытости коровки {Name} = {Satiety}. Если сейчас забрать молоко, то коровка погибнет. Покормите курочку");
+            }
+        }
+        //Собираем молоко
+        public void TakeMilkCows()
+        {
+            if (VolumeMilk == 0)
+            {
+                Console.WriteLine("Коровки еще не дали молока. Покормите коровок");
+                return;
+            }
+            VolumeMilk += 1;
+            VolumeTakeMilk -= 1;
+            Satiety -= 2;
         }
 
-        public int CheckSatiety()
+        //Переопределяем метод базового класса Animals
+        //Проверяем уровень сытости коровок и вызываем событие SatietyChanged с помощью метода OnSatietyChanged
+        internal override bool CheckSatietyAnimals()
         {
-            return Satiety;
-        }        
+            if (Satiety <= 0)
+            {
+                return Live = false;
+            }
+            if (Satiety == 1)
+            {
+                OnSatietyChanged($"Уровень сытости коровки {Name} = {Satiety}. Если сейчас не покормить коровку, то она погибнет");
+            }
+            return Live;
+        }
 
+        protected override void OnSatietyChanged(string message)
+        {
+            base.OnSatietyChanged(message);
+            Console.WriteLine(message);
+        }
     }
 }

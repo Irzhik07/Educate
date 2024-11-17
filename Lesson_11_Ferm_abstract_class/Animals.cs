@@ -6,13 +6,26 @@ namespace Lesson_11
     {
         public string Name { get; set; }
         public bool Live { get; set; }
-        public int Satiety { get; set; }
+        public int Satiety { get; protected set; }
 
-        //Проверяем уровень сытости курочек
-        //Если он <= 0, то курочки погибают
-        protected virtual void CheckSatietyAnimals()
-        {
-
+        public Animals(string name, bool live = true, int satiety = 2) 
+        { 
+            Name = name;
+            Live = true; 
+            Satiety = satiety; 
         }
+
+        public delegate void SatietyChangedEventHandler(string message);
+        //Событие изменения уровня сытости животных
+        public event SatietyChangedEventHandler? SatietyChanged;
+
+        protected virtual void OnSatietyChanged(string message)
+        {
+            SatietyChanged?.Invoke(message);
+        }
+
+        //Проверяем уровень сытости животных
+        internal abstract bool CheckSatietyAnimals();
+
     }
 }

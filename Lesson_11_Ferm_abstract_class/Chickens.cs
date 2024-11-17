@@ -8,30 +8,57 @@ namespace Lesson_11
         public int CountEgg { get; set; }
         public int CountTakeEgg { get; set; }
 
-        public Chickens(string name = "Неизвестно", bool live = true, int satiety = 1, int countEgg = 0, int countTakeEgg = 0)
+        public Chickens(string name, bool live = true, int satiety = 1) : base(name, live, satiety)
         {
-            Name = name; Live = true; Satiety = satiety; CountEgg = countEgg; CountTakeEgg = countTakeEgg;
+            CountEgg = 0;
+            CountTakeEgg = 0;
         }
 
-        //Проверяем уровень сытости курочек
-        //Если он <= 0, то курочки погибают
-        public virtual void CheckSatietyAnimals()
+        //Кормим курочек
+        public void FeedChickens()
         {
-            int s = 1;
-            foreach (var chicken in chickens)
-                s = CheckSatiety();
+            CountEgg += 1;
+            Satiety += 1;
 
-            if (s <= 0)
+            if (Satiety == 2)
             {
-                chickens.Clear();
-                Console.WriteLine("Сытость курочек <0. Курочки погибли");
+                OnSatietyChanged($"Уровень сытости курочки {Name} = {Satiety}. Если сейчас забрать яйцо, то курочка погибнет. Покормите курочку");
             }
         }
 
-        public int CheckSatiety()
+        //Переопределяем метод базового класса Animals
+        //Проверяем уровень сытости курочек и вызываем событие SatietyChanged с помощью метода OnSatietyChanged
+        internal override bool CheckSatietyAnimals()
         {
-            return Satiety;
+            if (Satiety <= 0)
+            {
+                return Live = false;
+            }
+            if (Satiety == 1)
+            {
+                OnSatietyChanged($"Уровень сытости курочки {Name} = {Satiety}. Если сейчас не покормить курочку, то она погибнет");
+            }
+            return Live;
+        }
+
+        protected override void OnSatietyChanged(string message)
+        {
+            base.OnSatietyChanged(message);
+            Console.WriteLine(message);
+        }
+
+        //Собираем яица
+        public void TakeEggChickens()
+        {
+            if (CountEgg == 0)
+            {
+                Console.WriteLine("Курочки еще не снесли яица. Покормите курочек");
+                return;
+            }
+
+            CountTakeEgg += 1;
+            CountEgg -= 1;
+            Satiety -= 2;
         }
     }
-}
 }

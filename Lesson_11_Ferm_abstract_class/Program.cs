@@ -25,11 +25,7 @@ namespace Lesson_11
                 Console.WriteLine("Проверьте Ваши права доступа к файлу. Отсутствуют права на изменение.\nРезультат игры не будет записан в файл");
 
             Ferm ferm = new Ferm();
-
-            //Chickens chickens = new Chickens();
-            //Cows cows = new Cows();
             ferm.AddAnimals();
-            
 
             while (exit)
             {
@@ -38,22 +34,22 @@ namespace Lesson_11
                 switch (action)
                 {
                     case 1:
-                        FeedChickens(ferm);
+                        ferm.FeedAnimals("chickens"); //кормим курочек
                         break;
                     case 2:
-                        TakeEggChickens(ferm);
+                        ferm.TakeEggChickens(); //собираем яица
                         break;
                     case 3:
-                        FeedCows(ferm);
+                        ferm.FeedAnimals("cows"); //кормим коровок
                         break;
                     case 4:
-                        TakeMilkCows(ferm);
+                        ferm.TakeMilkCows(); //собираем молоко
                         break;
                     case 5:
-                        FeedAnimals(ferm);
+                        ferm.FeedAnimals("all"); //кормим всех животных
                         break;
                     case 6:
-                        StatisticsPrint(ferm); //Выводим статистику по ферме
+                        ferm.StatisticsPrint(); //Выводим статистику по ферме
                         break;
                     case 7:
                         {
@@ -90,95 +86,6 @@ namespace Lesson_11
                     }
                 }
 
-                //Меню - 1. Кормим курочек
-                static void FeedChickens(Ferm ferm)
-                {
-                    foreach (var chicken in ferm.chickens)
-                    {
-                        chicken.CountEgg += 1;
-                        chicken.Satiety += 1;
-                    }
-                }
-
-                //Меню - 2. Забираем яица у курочек
-                static void TakeEggChickens(Ferm ferm)
-                {
-                    foreach (var chicken in ferm.chickens)
-                    {
-                        int count = 1;
-
-                        if (chicken.CountEgg == 0)
-                        {
-                            Console.WriteLine("Курочки еще не снесли яица. Покормите курочек");
-                            break;
-                        }
-
-                        chicken.CountTakeEgg += 1;
-                        chicken.CountEgg -= 1;
-                        chicken.Satiety -= 2;
-                            
-                        count += 1;
-
-                    }
-                    //Проверка уровня сытости курочек
-                    //Если уровень < 0, то курочки погибают
-                    ferm.CheckSatietyAnimals();
-
-                }
-
-                //Меню - 3. Кормим коровок
-                static void FeedCows(Ferm ferm)
-                {
-                    foreach (var cow in ferm.cows)
-                    {
-                        cow.VolumeMilk += 1;
-                        cow.Satiety += 1;
-                    }
-                }
-
-                //Меню - 4. Забираем молоко у коровок
-                static void TakeMilkCows(Ferm ferm)
-                {
-                    foreach (var cow in ferm.cows)
-                    {
-                        int count = 1;
-
-                        if (cow.VolumeMilk == 0)
-                        {
-                            Console.WriteLine("У коровок нет молока. Покормите коровок");
-                            break;
-                        }
-
-                        cow.VolumeTakeMilk += 1;
-                        cow.VolumeMilk -= 1;
-                        cow.Satiety -= 2;
-
-                        count += 1;
-
-                    }
-                    //Проверка уровня сытости коровок
-                    //Если уровень < 0, то коровки погибают
-                    ferm.CheckSatietyCows();
-                }
-
-                //Меню - 5. Кормим всех животных на ферме
-                static void FeedAnimals(Ferm ferm)
-                {
-                    FeedChickens(ferm);
-                    FeedCows(ferm);
-                }
-
-                //Вывод статистики фермы на экран
-                static void StatisticsPrint(Ferm ferm)
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    foreach (var chicken in ferm.chickens)
-                        Console.WriteLine($"Имя:{chicken.Name}  Статус жизни: {chicken.Live} Уровень сытости: {chicken.Satiety} Кол-во яиц - {chicken.CountEgg} Кол-во собранных яиц - {chicken.CountTakeEgg}");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    foreach (var cow in ferm.cows)
-                        Console.WriteLine($"Имя:{cow.Name}  Статус жизни: {cow.Live} Уровень сытости: {cow.Satiety} Кол-во молока - {cow.VolumeMilk} Кол-во собранного молока - {cow.VolumeTakeMilk}");
-                    Console.ResetColor();
-                }
                 //Запись результатов игры в файл
                 static bool RecordFile(Ferm ferm, FileInfo fileInfo, bool exit)
                 {
