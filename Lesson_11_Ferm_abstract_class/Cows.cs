@@ -19,9 +19,9 @@ namespace Lesson_11
             VolumeMilk += 1;
             Satiety += 1;
 
-            if (Satiety == 2)
+            if (Satiety == 2 || Satiety == 1)
             {
-                OnSatietyChanged($"Уровень сытости коровки {Name} = {Satiety}. Если сейчас забрать молоко, то коровка погибнет. Покормите курочку");
+                OnSatietyChanged($"Уровень сытости коровки {Name} = {Satiety}. Если сейчас забрать молоко, то коровка погибнет. Покормите еще коровку");
             }
         }
         //Собираем молоко
@@ -45,7 +45,7 @@ namespace Lesson_11
             {
                 return Live = false;
             }
-            if (Satiety == 1)
+            if (Satiety == 2 || Satiety == 1)
             {
                 OnSatietyChanged($"Уровень сытости коровки {Name} = {Satiety}. Если сейчас не покормить коровку, то она погибнет");
             }

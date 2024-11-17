@@ -20,9 +20,9 @@ namespace Lesson_11
             CountEgg += 1;
             Satiety += 1;
 
-            if (Satiety == 2)
+            if (Satiety == 2 || Satiety == 1)
             {
-                OnSatietyChanged($"Уровень сытости курочки {Name} = {Satiety}. Если сейчас забрать яйцо, то курочка погибнет. Покормите курочку");
+                OnSatietyChanged($"Уровень сытости курочки {Name} = {Satiety}. Если сейчас забрать яйцо, то курочка погибнет. Покормите еще курочку");
             }
         }
 
@@ -34,7 +34,7 @@ namespace Lesson_11
             {
                 return Live = false;
             }
-            if (Satiety == 1)
+            if (Satiety == 2 || Satiety ==1)
             {
                 OnSatietyChanged($"Уровень сытости курочки {Name} = {Satiety}. Если сейчас не покормить курочку, то она погибнет");
             }
