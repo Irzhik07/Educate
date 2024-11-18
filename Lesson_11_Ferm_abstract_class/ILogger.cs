@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lesson_11_Ferm_abstract_class
 {
-    internal interface IConsWrite
+    public interface ILogger
     {
-
+        void LogInfo(string message);
     }
 
 }
