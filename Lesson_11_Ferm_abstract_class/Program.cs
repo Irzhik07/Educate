@@ -85,7 +85,7 @@ namespace Lesson_11
                 //Запись результатов игры в файл
                 static void RecordFile(Ferm ferm, ILogger logger)
                 {
-                        logger.LogInfo($"Результаты игры:\n");
+                        logger.LogInfo($"Результаты игры:");
                         foreach (var chicken in ferm.chickens)
                             logger.LogInfo($"Имя:{chicken.Name}  Статус жизни: {chicken.Live} Уровень сытости: {chicken.Satiety} Кол-во яиц - {chicken.CountEgg} Кол-во собранных яиц - {chicken.CountTakeEgg}");
                         foreach (var cow in ferm.cows)
