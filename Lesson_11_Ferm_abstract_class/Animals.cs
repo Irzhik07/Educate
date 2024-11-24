@@ -1,4 +1,5 @@
-﻿using static Lesson_11.Program;
+﻿using Lesson_11_Ferm_abstract_class;
+using static Lesson_11.Program;
 
 namespace Lesson_11
 {

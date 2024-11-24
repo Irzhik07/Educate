@@ -18,6 +18,7 @@ namespace Lesson_11
             bool exit = false;
 
             ILogger logger = new CombineLogger(new ILogger[] { new LoggerInfo(), new LoggerInfoFile(@"Z:\I.P.Kuznetsova\GameFerm.txt") });
+            //ILogger loggerInfo = new LoggerInfo();
 
             Ferm ferm = new Ferm();
             ferm.AddAnimals();
@@ -59,7 +60,7 @@ namespace Lesson_11
                 //Вызываем меню действий
                 static int Menu(ILogger logger)
                 {
-                    Console.WriteLine($"Выберите действие:\nПокормить курочек - 1\nСобрать яица у курочек - 2\nКормить коровок - 3\nПодоить коровок - 4" +
+                    logger.LogInfo($"Выберите действие:\nПокормить курочек - 1\nСобрать яица у курочек - 2\nКормить коровок - 3\nПодоить коровок - 4" +
                         $"\nПокормить всех - 5\nПосмотреть статистику фермы - 6\nВыйти и сохранить результат - 7");
 
                     return CheckInput(logger);   //Выполним проверку введенных данных

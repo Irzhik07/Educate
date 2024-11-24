@@ -4,11 +4,9 @@ using System.Diagnostics.Metrics;
 
 namespace Lesson_11
 {
-    public class Cows : Animals, ILogger
+    public class Cows : Animals
     {
-        private ILogger[] _loggers;
         ILogger logger = new CombineLogger(new ILogger[] { new LoggerInfo(), new LoggerInfoFile(@"Z:\I.P.Kuznetsova\GameFerm.txt") });
-
 
         public int VolumeMilk { get; set; }
         public int VolumeTakeMilk { get; set; }
@@ -60,15 +58,7 @@ namespace Lesson_11
         protected override void OnSatietyChanged(string message)
         {
             base.OnSatietyChanged(message);
-            Console.WriteLine(message);
-        }
-
-        void ILogger.LogInfo(string message)
-        {
-            foreach (ILogger logger in _loggers)
-            {
-                logger.LogInfo(message);
-            }
+            logger.LogInfo(message);
         }
     }
 }

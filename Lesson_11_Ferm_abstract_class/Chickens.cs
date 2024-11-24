@@ -1,10 +1,13 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using Lesson_11_Ferm_abstract_class;
+using System.Reflection.Metadata.Ecma335;
 using static Lesson_11.Program;
 
 namespace Lesson_11
 {
     public class Chickens : Animals
     {
+        ILogger logger = new CombineLogger(new ILogger[] { new LoggerInfo(), new LoggerInfoFile(@"Z:\I.P.Kuznetsova\GameFerm.txt") });
+
         public int CountEgg { get; set; }
         public int CountTakeEgg { get; set; }
 
@@ -44,7 +47,7 @@ namespace Lesson_11
         protected override void OnSatietyChanged(string message)
         {
             base.OnSatietyChanged(message);
-            Console.WriteLine(message);
+            logger.LogInfo(message);
         }
 
         //Собираем яица
@@ -52,7 +55,7 @@ namespace Lesson_11
         {
             if (CountEgg == 0)
             {
-                Console.WriteLine("Курочки еще не снесли яица. Покормите курочек");
+                logger.LogInfo("Курочки еще не снесли яица. Покормите курочек");
                 return;
             }
 
